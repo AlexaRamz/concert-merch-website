@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <title>Merchify</title>
+  </head>
+  
+  <body onload = "loadItem()">
+    <h1>Checkout</h1>
+    <h2>Shipment</h2>
+    <div class="white_background">
+      <div class="input_box">
+        <div>
+          <h5>Callie Anteater</h5>
+          <h6>
+            12345 Ring Road Dr
+            <br>
+            Irvine, CA 92697
+          </h6>
+        </div>
+        <div class="circle_button">
+          <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+        </div>
+      </div>
+    </div>
+    <h2>Delivery Method</h2>
+    <div class="white_background" id="item_container">
+      <div class="input_box">
+        <div>
+          <h5>FREE</h5>
+          <h6>Standard</h6>
+        </div>
+        <div class="circle_button">
+          <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+        </div>
+      </div>
+      <template id="item-card-template">
+        <hr>
+        <div class="item_box">
+          <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
+          <h3 class="item_box_text">
+            <div id = "item_desc">
+              Item Description
+            </div>
+            <br>
+            <div id = "item_price">
+              $29.99
+            </div>
+          </h3>
+        </div>
+      </template>
+      <hr>
+      <div class="item_box">
+        <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
+        <h3 class="item_box_text">
+          Item Description
+          <br>
+          <div id = "item_price">
+            $29.99
+          </div>
+        </h3>
+      </div>
+      <hr>
+      <div class="item_box">
+        <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
+        <h3 class="item_box_text">
+          Item Description
+          <br>
+          <div id = "item_price">
+            $29.99
+          </div>
+        </h3>
+      </div>
+    </div>
+    <h2>Payment</h2>
+    <div class="white_background">
+      <div class="input_box">
+        <h5>Add Credit/Debit Card</h5>
+        <div class="circle_button">
+          <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+        </div>
+      </div>
+      <hr>
+      <div class="input_box">
+        <h5>Paypal</h5>
+        <div class="circle_button">
+          <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+        </div>
+      </div>
+      <hr>
+      <div class="input_box">
+        <h5>Apple Pay</h5>
+        <div class="circle_button">
+          <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+        </div>
+      </div>
+    </div>
+    <h2>Cost Summary</h2>
+    <hr>
+    <div class="info_box">
+      <h3>
+        Subtotal
+        <span style="float: right;">$29.99</span>
+        <br>
+        Shipping
+        <span style="float: right;">FREE</span>
+        <br>
+        Tax
+        <span style="float: right;">$0.00</span>
+      </h3>
+    </div>
+    <hr>
+    <div class="info_box">
+      <h5>
+        Total
+        <span style="float: right;">$29.99</span>
+      </h5>
+    </div>
+    <button class="submit_order_button" type="button" onclick=""> 
+      Submit Order
+    </button>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <title>Merchify</title>
+  </head>
+  
+  <body onload = "getStats()">
+    <div class="product_page">
+      <h1 id="category-title">Graphic Tees</h1>
+      <div class="products">
+        <template id="product-card-template">
+          <div class="product_card">
+            <button id="select_button" type="button" onclick="goProductPage(null)">
+              <div class="product_card">
+                <img id="product-image" class="product_image" src="" alt="">
+                <div class="product_text">
+                  <h3 class="product_title"></h3>
+                  <h3 class="product_desc"></h3>
+                  <h3 class="product_price"></h3>
+                </div>
+              </div>
+            </button>
+          </div>
+        </template>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

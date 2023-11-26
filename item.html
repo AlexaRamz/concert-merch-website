@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <title>Merchify</title>
+  </head>
+  
+  <body onload = "getItemInfo()">
+    <div class="image_container_relative">
+      <button class="circle_button_back" style="transform: scaleX(-1);" type="button" onclick="">
+        <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
+      </button>
+      <button class="cart_button" type="button" onclick="goBasketPage()">
+        <img class="cart_button_image" src="./imgs/cart_button.png" alt="">
+      </button>
+      <img id="product-image" class="item_image" src="" alt="">
+    </div>
+    <div class="item_text">
+      <div id="product-name">
+        Mitski Tour T-shirt
+      </div>
+      <div id="product-price">
+        $29.99
+      </div>
+    </div>
+    <button id="action-button" class="select_size_button" type="button" onclick=""> 
+      Add to Basket
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
