@@ -197,6 +197,7 @@ function addToBasket() {
 
 function loadBasket() {
   let basket = JSON.parse(sessionStorage.getItem('cart_items'));
+  totalCost = 0;
   if (basket != null) {
     const itemCardTemplate = document.getElementById("item-card-template");
     const itemCards = document.getElementById("item-card-container");
@@ -206,8 +207,39 @@ function loadBasket() {
       let item = itemCardTemplate.content.cloneNode(true)
       item.getElementById("item-image").src = i.image;
       item.getElementById("item-desc").textContent = i.title;
-      item.getElementById("item-price").textContent = ("$" + i.price.toFixed(2));;
+      item.getElementById("item-price").textContent = ("$" + i.price.toFixed(2));
       itemCards.append(item);
+
+      totalCost += i.price;
     })
+    document.getElementById("subtotal").textContent = ("$" + totalCost.toFixed(2));
+    document.getElementById("total-cost").textContent = ("$" + totalCost.toFixed(2));
+  }
+}
+
+// Checkout
+function goCheckoutPage() {
+  window.location = "./checkout.html";
+}
+
+function loadItems() {
+  let basket = JSON.parse(sessionStorage.getItem('cart_items'));
+  totalCost = 0;
+  if (basket != null) {
+    const itemCardTemplate = document.getElementById("item-card-template");
+    const itemCards = document.getElementById("item-card-container");
+    console.log(basket.length);
+    basket.forEach(i =>
+    {
+      let item = itemCardTemplate.content.cloneNode(true)
+      item.getElementById("item-image").src = i.image;
+      item.getElementById("item-desc").textContent = i.title;
+      item.getElementById("item-price").textContent = ("$" + i.price.toFixed(2));
+      itemCards.append(item);
+
+      totalCost += i.price;
+    })
+    document.getElementById("subtotal").textContent = ("$" + totalCost.toFixed(2));
+    document.getElementById("total-cost").textContent = ("$" + totalCost.toFixed(2));
   }
 }

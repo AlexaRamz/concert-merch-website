@@ -10,7 +10,7 @@
     <title>Merchify</title>
   </head>
   
-  <body onload = "loadItem()">
+  <body onload = "loadItems()">
     <h1>Checkout</h1>
     <h2>Shipment</h2>
     <div class="white_background">
@@ -39,42 +39,23 @@
           <img class="circle_button_image" src="./imgs/right_arrow.png" alt="">
         </div>
       </div>
-      <template id="item-card-template">
-        <hr>
-        <div class="item_box">
-          <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
-          <h3 class="item_box_text">
-            <div id = "item_desc">
-              Item Description
+      <div id="item-card-container">
+        <template id="item-card-template">
+          <div class="item_card">
+            <hr>
+            <div class="item_box">
+              <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
+              <h3 class="item_box_text">
+                <div id = "item-desc">
+                  Item Description
+                </div>
+                <div id = "item-price">
+                  $29.99
+                </div>
+              </h3>
             </div>
-            <br>
-            <div id = "item_price">
-              $29.99
-            </div>
-          </h3>
-        </div>
-      </template>
-      <hr>
-      <div class="item_box">
-        <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
-        <h3 class="item_box_text">
-          Item Description
-          <br>
-          <div id = "item_price">
-            $29.99
           </div>
-        </h3>
-      </div>
-      <hr>
-      <div class="item_box">
-        <img id="item-image" class="item_circle_image" src="./imgs/IMG_3196.jpg" alt="">
-        <h3 class="item_box_text">
-          Item Description
-          <br>
-          <div id = "item_price">
-            $29.99
-          </div>
-        </h3>
+        </template>
       </div>
     </div>
     <h2>Payment</h2>
@@ -105,7 +86,7 @@
     <div class="info_box">
       <h3>
         Subtotal
-        <span style="float: right;">$29.99</span>
+        <span id = "subtotal" style="float: right;">$29.99</span>
         <br>
         Shipping
         <span style="float: right;">FREE</span>
@@ -118,11 +99,12 @@
     <div class="info_box">
       <h5>
         Total
-        <span style="float: right;">$29.99</span>
+        <span id = "total-cost" style="float: right;">$29.99</span>
       </h5>
     </div>
     <button class="submit_order_button" type="button" onclick=""> 
       Submit Order
     </button>
+    <script src="script.js"></script>
   </body>
 </html>
