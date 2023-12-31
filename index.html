@@ -10,53 +10,87 @@
     <title>Merchify</title>
   </head>
   
-  <body onload = "loadHomeElements()">
-    <h1>Merchify</h1>
-    <h2>Categories</h2>
-    <div class="container">
-      <div class="cards">
-        <template id="category-card-template">
-          <div class="card">
-            <button type="button" class="card_image" onclick="goProductsPage()">
-              <img id="category-image" src="" alt="">
-            </button>
-            <h3 class="card_text"></h3>
-          </div>
-        </template>
-      </div>
+  <body onload="">
+    <div id="main"></div>
+    <div id="oauth"></div>
+
+    <img src="imgs/Song.png">
+    <div class="sync_text_1">
+      Sync streaming service
     </div>
-    <div class="products">
-      <template id="product-card-template">
-        <div class="product_card">
-          <div class="product_image">
-            <img id="product-image" src="" alt="">
-          </div>
-          <div class="product_text">
-            <h3 class="product_title"></h3>
-            <h3 class="product_price"></h3>
-            <h3 class="product_desc"></h3>
-          </div>
-        </div>
-      </template>
+    <div class="sync_text_2">
+      personalized recommendations right at your fingertips
     </div>
-    <h2>Recommended</h2>
-    <div id="grid-item-container">
-      <template id = "grid-item-template">
-        <div class="image_container">
-          <button type="button" onclick="loadProductPage(null)">
-            <img id="grid-image-1" class="grid_image1" src="" alt="">
-          </button>
-          <div class="image_container2">
-            <button type="button" onclick="loadProductPage(null)">
-              <img id="grid-image-2" class="grid_image2" src="" alt="">
-            </button>
-            <button type="button" onclick="loadProductPage(null)">
-              <img id="grid-image-3" class="grid_image2" src="" alt="">
-            </button>
-          </div>
-        </div>
-      </template>
-    </div>
+    <button style="top: 615px;" id="login-button" class="sync_button" type="button" onclick=""> 
+      <img class="headphone_icon" src="imgs/Headphone.png">
+      Sync with Spotify
+    </button>
+    <button class="sync_text_3" type="button" onclick="goHomePage()"> 
+      Continue as guest
+    </button>
+
+    <template id="logged-in-template">
+      <h1>Logged in as <span data-bind="display_name"></span></h1>
+      <img width="150" data-bind-src="images[0].url" data-bind-alt="display_name" />
+      <table>
+        <tr>
+          <td>Display name</td>
+          <td data-bind="display_name"></td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td data-bind="id"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td data-bind="email"></td>
+        </tr>
+        <tr>
+          <td>Spotify URI</td>
+          <td>
+            <a data-bind="external_urls.spotify" data-bind-href="external_urls.spotify"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>Link </dt>
+          <td>
+            <a data-bind="href" data-bind-href="href"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>Profile Image</td>
+          <td>
+            <a data-bind-href="images[0].url" data-bind="images[0].url"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td data-bind="country"></td>
+        </tr>
+      </table>
+
+      <button id="refresh-token-button" data-bind-onclick="refreshTokenClick();">Refresh Token</button>
+      <button id="logout-button" data-bind-onclick="logoutClick();">Log out</button>
+    </template>
+
+    <template id="oauth-template">
+      <h2>oAuth info</h2>
+      <table>
+        <tr>
+          <td>Access token</td>
+          <td data-bind="access_token"></td>
+        </tr>
+        <tr>
+          <td>Refresh token</td>
+          <td data-bind="refresh_token"></td>
+        </tr>
+        <tr>
+          <td>Expiration at</td>
+          <td data-bind="expires">${getExpirationDate(expires_in)}</td>
+        </tr>
+      </table>
+    </template>
+    <script src="spotifysync.js" type="module"></script>
     <script src="script.js"></script>
   </body>
 </html>

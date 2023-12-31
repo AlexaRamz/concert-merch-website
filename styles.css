@@ -9,7 +9,7 @@ body {
   position: relative;
   margin: 0 auto;
   width: 375px;
-  min-height: 100vh;
+  min-height: 812px;
   height: 100%;
   background: #F5F8FF;
   border-left: 1px solid #000000;
@@ -104,12 +104,18 @@ h6 {
   overflow: hidden;
 }
 
-.card_image {
+.card_image_button {
   width: 87px;
   height: 87px;
   border: 1px solid #000000;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.card_image {
+  width: 87px;
+  height: 87px;
+  object-fit: contain;
 }
 
 .card_text {
@@ -162,8 +168,7 @@ h6 {
   font-weight: 600;
   font-size: 16px;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
   padding-left: 16px;
 }
 
@@ -180,6 +185,9 @@ h6 {
   font-weight: 700;
   font-size: 20px;
   color: #FFFFFF;
+
+  position: absolute;
+  bottom: 20px;
 }
 
 /* checkout page */
@@ -321,4 +329,106 @@ h6 {
 .cart_button_image {
   width: 23px;
   height: 26px;
+}
+
+/* sync page */
+
+.sync_text_1 {
+  position: absolute;
+  width: 306px;
+  left: calc(50% - 306px/2 - 14.5px);
+  top: 363px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+.sync_text_2 {
+  position: absolute;
+  left: 16px;
+  top: 480px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #7388FF;
+}
+.sync_text_3 {
+  position: absolute;
+  left: 116px;
+  top: 690px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #7388FF;
+}
+
+.sync_button {
+
+  position: absolute;
+  width: 312px;
+  height: 48px;
+
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 32px;
+  text-align: center;
+  margin-left: 31px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+
+.headphone_icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
+}
+
+/* artist list */
+.artist_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 74px;
+  align-items: center;
+}
+
+.artist_image {
+  position: absolute;
+  left: 22.23px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 59px;
+  height: 59px;
+}
+
+.artist_name {
+  position: absolute;
+  left: 101.2px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }

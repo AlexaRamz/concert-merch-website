@@ -5,31 +5,31 @@ const cardTemplate = document.getElementById("category-card-template");
 
 let array = [{
   category: "Shirt",
-  image: "./imgs/IMG_3194.jpg"
+  image: "./imgs/shirt image 01.png"
 },
 {
   category: "Bags",
-  image: "./imgs/IMG_3195.jpg"
+  image: "./imgs/bag image 01.png"
 },
 {
   category: "Gifts",
-  image: "./imgs/IMG_3196.jpg"
+  image: "./imgs/gift image 01.png"
 },
 {
   category: "Shirt",
-  image: "./imgs/IMG_3194.jpg"
+  image: "./imgs/shirt image 01.png"
 },
 {
   category: "Bags",
-  image: "./imgs/IMG_3195.jpg"
+  image: "./imgs/bag image 01.png"
 },
 {
   category: "Gifts",
-  image: "./imgs/IMG_3196.jpg"
+  image: "./imgs/gift image 01.png"
 },
 {
   category: "Shirt",
-  image: "./imgs/IMG_3194.jpg"
+  image: "./imgs/shirt image 01.png"
 },
 ];
 
@@ -242,4 +242,8 @@ function loadItems() {
     document.getElementById("subtotal").textContent = ("$" + totalCost.toFixed(2));
     document.getElementById("total-cost").textContent = ("$" + totalCost.toFixed(2));
   }
+}
+
+function goHomePage() {
+  window.location = "./home.html";
 }
